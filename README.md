@@ -8,13 +8,9 @@ On-call engineers lose valuable time re-solving incidents their team has already
 
 ## Screenshots
 
-| Memory OFF vs ON | Recalled memories |
-|---|---|
-| ![Memory OFF vs ON comparison](docs/screenshots/compare.png) | ![Recalled memories panel](docs/screenshots/recalled-memories.png) |
+### Memory OFF vs ON
 
-| Failed-fix warning (search-api) | Outcome saved to memory |
-|---|---|
-| ![Failed-fix warning](docs/screenshots/failed-fix-warning.png) | ![Outcome saved](docs/screenshots/outcome-saved.png) |
+<img src="https://github.com/user-attachments/assets/63db8e8f-22a4-454f-bffa-79ee67f0b61b" alt="IncidentMind dashboard comparing Memory OFF vs ON" width="100%" />
 
 ## Key features
 
@@ -167,6 +163,5 @@ Built for **HackWith Hyderabad 3.0**, theme: *AI Agents That Learn Using Hindsig
 
 | Name | Role | Links |
 |---|---|---|
-| [Your Name] | [e.g. Full-stack, memory design] | [GitHub](https://github.com/your-username) / [LinkedIn](https://linkedin.com/in/your-profile) |
-| [Teammate 2] | [Role] | [GitHub](https://github.com/username) |
-| [Teammate 3] | [Role] | [GitHub](https://github.com/username) |
+| Yaswanth Vissamsetty | Team Leader | [GitHub](https://github.com/Yaswanth-Vissamsetty) / [LinkedIn](https://linkedin.com/in/your-profile) |
+| Teja Shiva Mani Nodagala | Team Member | [GitHub](https://github.com/teammate-username) / [LinkedIn](https://linkedin.com/in/teammate-profile) |
