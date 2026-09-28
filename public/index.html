@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IncidentMind — on-call memory agent</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header>
+        <div class="eyebrow"><span class="pulse"></span> PRODUCTION MEMORY SYSTEM</div>
+        <h1>IncidentMind<span>:</span> on-call agent that remembers every incident</h1>
+        <p>Compare generic triage with evidence from the incidents your team has already resolved.</p>
+      </header>
+
+      <section class="input-card">
+        <div class="section-label">INCOMING ALERT</div>
+        <div class="form-grid">
+          <label>Service
+            <select id="service"><option>checkout-service</option><option>auth-service</option><option>payments-gateway</option><option>search-api</option><option>inventory-db</option></select>
+          </label>
+          <label class="wide">Alert title
+            <input id="alert" placeholder="Describe the alert" />
+          </label>
+          <label class="wide">Key logs
+            <textarea id="logs" rows="5" placeholder="Paste the most relevant log lines"></textarea>
+          </label>
+        </div>
+        <div class="actions">
+          <button class="secondary" id="sample">Load sample alert</button>
+          <button class="primary" id="compare">Compare Memory OFF vs ON <span>→</span></button>
+          <button class="secondary" id="retry" hidden>Retry</button>
+        </div>
+        <p class="form-error" id="form-error" hidden></p>
+      </section>
+
+      <div class="comparison-label"><span>LIVE ANALYSIS</span><i></i><span id="latency">READY</span></div>
+      <section class="comparison">
+        <article class="analysis-card off" id="off-card">
+          <div class="card-heading"><div><span class="mode-dot"></span> WITHOUT MEMORY</div><small>generic triage</small></div>
+          <div class="empty">Run a comparison to see baseline SRE guidance.</div>
+        </article>
+        <article class="analysis-card on" id="on-card">
+          <div class="card-heading"><div><span class="mode-dot"></span> WITH HINDSIGHT MEMORY</div><small>evidence-grounded</small></div>
+          <div class="empty">Recalled incident evidence will appear here.</div>
+        </article>
+      </section>
+
+      <details class="memories" id="memories" hidden>
+        <summary><span>RECALLED MEMORIES</span><b id="memory-count">0</b><em>Click to inspect the evidence</em></summary>
+        <div id="memory-list"></div>
+      </details>
+
+      <section class="feedback" id="feedback" hidden>
+        <div><div class="section-label">CLOSE THE LEARNING LOOP</div><h2>Did this recommendation work?</h2><p>Your outcome becomes evidence for the next on-call engineer.</p></div>
+        <div class="feedback-controls">
+          <div class="result-buttons" id="result-buttons"><button data-result="worked">✓ Worked</button><button data-result="partial">◐ Partially</button><button data-result="failed">× Failed</button></div>
+          <textarea id="notes" rows="2" placeholder="What happened? Optional notes for future responders."></textarea>
+          <button class="primary" id="save-outcome">Save to memory</button>
+          <p class="saved" id="saved" hidden></p>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

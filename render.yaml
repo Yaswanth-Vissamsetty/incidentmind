@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: incidentmind
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: HINDSIGHT_API_KEY
+        sync: false
+      - key: HINDSIGHT_BASE_URL
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: PORT
+        value: "3000"
+        sync: false

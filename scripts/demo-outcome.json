@@ -1,0 +1,7 @@
+{
+  "service": "checkout-service",
+  "alert": "Checkout latency spike, 504 errors after 14:30 deploy",
+  "recommended_fix": "Revert worker concurrency to 24 and cap Hikari maximumPoolSize at 35 after checking Postgres headroom.",
+  "result": "worked",
+  "notes": "Validated after v2.14.3 rollback: checkout 504 rate returned to baseline and DB sessions stayed below 80%."
+}

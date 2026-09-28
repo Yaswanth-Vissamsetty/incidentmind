@@ -1,0 +1,21 @@
+{
+  "name": "incidentmind",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "seed": "node scripts/seed.js",
+    "check": "node scripts/check.js",
+    "memory:smoke": "node scripts/memory-smoke.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@vectorize-io/hindsight-client": "^0.3.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  }
+}

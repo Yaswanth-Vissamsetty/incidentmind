@@ -1,0 +1,5 @@
+{
+  "service": "checkout-service",
+  "alert": "Checkout latency spike, 504 errors after 14:30 deploy",
+  "logs": "HikariPool-1 - Connection is not available, request timed out after 30000ms\ndeploy v2.14.3 completed 14:28"
+}
